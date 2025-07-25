@@ -1,4 +1,4 @@
-import { browser, by, element } from 'protractor';
+import { browser, by, element } from "protractor";
 
 export class AppPage {
   navigateTo(destination) {
@@ -10,6 +10,8 @@ export class AppPage {
   }
 
   getPageOneTitleText() {
-    return element(by.tagName('app-home')).element(by.deepCss('ion-title')).getText();
+    return element(by.tagName("app-home"))
+      .element(by.deepCss("ion-title"))
+      .getText();
   }
 }

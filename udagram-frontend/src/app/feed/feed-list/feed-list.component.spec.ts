@@ -1,21 +1,20 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { FeedListComponent } from './feed-list.component';
-import { FeedProviderService } from '../services/feed.provider.service';
-import { feedItemMocks } from '../models/feed-item.model';
+import { FeedListComponent } from "./feed-list.component";
+import { FeedProviderService } from "../services/feed.provider.service";
+import { feedItemMocks } from "../models/feed-item.model";
 
-describe('FeedListComponent', () => {
+describe("FeedListComponent", () => {
   let component: FeedListComponent;
   let fixture: ComponentFixture<FeedListComponent>;
   let feedProvider: FeedProviderService;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FeedListComponent ],
+      declarations: [FeedListComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -29,19 +28,19 @@ describe('FeedListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 
-  it('should fetch on load', () => {
+  it("should fetch on load", () => {
     expect(feedProvider.getFeed).toHaveBeenCalled();
   });
 
-  it('should display all of the fetched items', () => {
+  it("should display all of the fetched items", () => {
     component.feedItems = feedItemMocks;
     fixture.detectChanges();
     const app = fixture.nativeElement;
-    const items = app.querySelectorAll('app-feed-item');
+    const items = app.querySelectorAll("app-feed-item");
     expect(items.length).toEqual(feedItemMocks.length);
   });
 });
