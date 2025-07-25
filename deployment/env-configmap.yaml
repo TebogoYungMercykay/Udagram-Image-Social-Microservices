@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: ConfigMap
+
 metadata:
   name: env-config
 data:
   POSTGRES_USERNAME: postgres
   POSTGRES_PASSWORD: postgres
-  POSTGRES_HOST: postgres.ci7ak904s7kp.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: postgres
   POSTGRES_DB: postgres
   AWS_BUCKET: bucket
   AWS_REGION: us-east-1
