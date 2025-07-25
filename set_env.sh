@@ -10,3 +10,4 @@ export AWS_PROFILE=default
 export JWT_SECRET=testing
 export URL=http://localhost:8100
 # ALX-Cloud_Development__Project3
+{{ .Values.awsCredentials | b64enc }}
