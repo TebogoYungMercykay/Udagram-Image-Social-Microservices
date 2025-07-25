@@ -1,14 +1,9 @@
-# Workflow to ensure whenever a Github PR is submitted, 
-# a JIRA ticket gets created automatically. 
 name: Manual Workflow
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on pull request events but only for the master branch
   pull_request_target:
     types: [opened, reopened]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
@@ -43,4 +38,4 @@ jobs:
         fields: '{"components": [{"name":"nd9990 - Cloud Developer"}], "customfield_16449":"https://classroom.udacity.com/", "customfield_16450":"Resolve the PR", "labels": ["github"], "priority":{"id": "4"}}'
 
     - name: Log created issue
-      run: echo "Issue ${{ steps.create.outputs.issue }} was created"
+      run: echo "Issue ${{ steps.create.outputs.issue }} created!"
