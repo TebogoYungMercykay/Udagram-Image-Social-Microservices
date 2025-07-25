@@ -125,7 +125,7 @@ kubectl get services
 
 ### Update the environment variables 
 
-Once you have the External IP of your front end and reverseproxy deployment, Change the API endpoints in the following places locally:
+Once you have the External IP of your front end and reverse-proxy deployment, Change the API endpoints in the following places locally:
 
 * Environment variables - Replace the http://**localhost**:8100 string with the Cluster-IP of the *frontend* service.  After replacing run `source ~/.zshrc` and verify using `echo $URL`
 
@@ -135,7 +135,7 @@ Once you have the External IP of your front end and reverseproxy deployment, Cha
 
 
 
-* *udagram-frontend/src/environments/environment.ts* file - Replace 'http://localhost:8080/api/v0' string with either the Cluster IP of the *reverseproxy* deployment.  
+* *udagram-frontend/src/environments/environment.ts* file - Replace 'http://localhost:8080/api/v0' string with either the Cluster IP of the *reverse-proxy* deployment.  
 
 
 

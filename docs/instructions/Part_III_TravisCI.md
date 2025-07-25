@@ -8,7 +8,7 @@ The end result that we want is a setup where changes in your GitHub code will au
 
 Log in to https://hub.docker.com/ and create four public repositories - each repository corresponding to your local Docker images.
 
-* `reverseproxy`
+* `reverse-proxy`
 * `udagram-api-user`
 * `udagram-api-feed`
 * `udagram-frontend`
