@@ -28,15 +28,8 @@ plugins/
 plugins/android.json
 plugins/ios.json
 $RECYCLE.BIN/
-postgres_dev/
-logfile
 
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
 node_modules
-venv/
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml

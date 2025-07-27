@@ -1,20 +1,19 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { AuthLoginComponent } from './auth-login.component';
+import { AuthLoginComponent } from "./auth-login.component";
 
-describe('AuthLoginPage', () => {
+describe("AuthLoginPage", () => {
   let component: AuthLoginComponent;
   let fixture: ComponentFixture<AuthLoginComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [FormsModule, ReactiveFormsModule],
-      declarations: [ AuthLoginComponent ],
+      declarations: [AuthLoginComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -23,7 +22,7 @@ describe('AuthLoginPage', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

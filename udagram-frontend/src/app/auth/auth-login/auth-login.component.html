@@ -7,11 +7,8 @@
     <ion-label position="floating" color="primary">Password</ion-label>
     <ion-input type="password" formControlName="password" required></ion-input>
   </ion-item>
-  <ion-button 
-    color="primary" 
-    type="submit"
-    [disabled]="!loginForm.valid">
+  <ion-button color="primary" type="submit" [disabled]="!loginForm.valid">
     Log In
   </ion-button>
-  {{error}}
+  {{ error }}
 </form>

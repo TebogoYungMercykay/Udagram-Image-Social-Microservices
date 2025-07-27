@@ -95,9 +95,9 @@ COPY --from=ionic  /usr/src/app/www /usr/share/nginx/html
 >
 
 ### How would containers discover each other and communicate?
-Use another container named *reverseproxy* running the Nginx server. The *reverseproxy* service will help add another layer between the frontend and backend APIs so that the frontend only uses a single endpoint and doesn't realize it's deployed separately. *This is one of the approaches and not necessarily the only way to deploy the services. *To set up the *reverseproxy* container, follow the steps below:
+Use another container named *reverse-proxy* running the Nginx server. The *reverse-proxy* service will help add another layer between the frontend and backend APIs so that the frontend only uses a single endpoint and doesn't realize it's deployed separately. *This is one of the approaches and not necessarily the only way to deploy the services. *To set up the *reverse-proxy* container, follow the steps below:
 
-1. Create a newer directory */project/udagram-reverseproxy/  *
+1. Create a newer directory */project/udagram-reverse-proxy/  *
 2. Create a Dockerfile as:
 ```bash
 FROM nginx:alpine
@@ -146,7 +146,7 @@ At this moment, your project directory would have the following structure:
 │   └── src
 ├── udagram-frontend
 │   └── src
-└── udagram-reverseproxy
+└── udagram-reverse-proxy
 ```
 
 
@@ -161,7 +161,7 @@ At this moment, your project directory would have the following structure:
    - */project/udagram-api-feed/* 
    - */project/udagram-api-feed/* 
    - */project/udagram-frontend/* 
-   - */project/udagram-reverseproxy/*
+   - */project/udagram-reverse-proxy/*
 
  The `docker-compose`  <a href="https://docs.docker.com/compose/" target="_blank">command</a> uses a YAML file to configure your application’s services in one go. Meaning, you create and start all the services from your configuration file, with a single command. Otherwise, you will have to individually build containers one-by-one for each of your services. 
 
